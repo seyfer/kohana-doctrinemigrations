@@ -21,11 +21,11 @@ Additionally, you should create a directory for your migration classes that is l
 application directory (application/migrations/).
 
 To run from the command line, execute this command from the directory that has your index.php file:
-`php index.php --uri=doctrine/migrations`.  This will run all database migrations up to the
+`php index.php --uri=migrate`.  This will run all database migrations up to the
 current version. You can optionally include the version that you want to migrate up/down to like so:
-`php index.php --uri=doctrine/migrations/14`.
+`php index.php --uri=migrate/14`.
 
-You can additionally execute: `php index.php --uri=doctrinemigrations/current` to return the current
+You can additionally execute: `php index.php --uri=migrate/current` to return the current
 migrations version.
 
 Additional information about how to create migration classes can be found at
