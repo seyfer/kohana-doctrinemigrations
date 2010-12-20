@@ -63,6 +63,14 @@ abstract class Kohana_Controller_Doctrine_Migrations extends Controller
 		// If no version was specified, find the latest version.
 		$version = (int) $this->request->param('version', $this->_migration->getLatestVersion());
 
+		if ($current == $version)
+		{
+			echo __('Database migration is already #:current.',
+				array(':current' => $current)).PHP_EOL;
+			
+			exit (0);
+		}
+
 		try
 		{
 			$this->_migration->migrate($version);
