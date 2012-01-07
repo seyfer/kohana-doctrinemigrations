@@ -26,3 +26,11 @@ $doctrine_cfg->set('console_commands',
         )
     )
 );
+
+$doctrine_cfg->set('console_helpers',
+    array_merge( $doctrine_cfg->get('console_helpers',array()),
+        array(
+            'dialog' => new \Symfony\Component\Console\Helper\DialogHelper(),
+        )
+    )
+);
