@@ -1,14 +1,28 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-Route::set('doctrine', 'migrate(/<version>)', array('version' => '\d+'))
-	->defaults(array(
-		'controller' => 'migrations',
-		'directory'  => 'doctrine',
-	));
+$modules = Kohana::modules();
 
-Route::set('doctrine/current', 'migrate/current')
-	->defaults(array(
-		'controller' => 'migrations',
-		'action'     => 'current',
-		'directory'  => 'doctrine',
-	));
+$doctrine_config = Kohana::$config->load('doctrine');
+
+require_once $doctrine_config['doctrine_path'] .'Doctrine/Common/ClassLoader.php';
+
+use Doctrine\Common\ClassLoader;
+
+$classLoader = new ClassLoader('Doctrine\DBAL\Migrations', MODPATH.'doctrine-migrations/vendor/doctrine-migrations/lib');
+$classLoader->register();
+
+$doctrine_cfg = Kohana::$config->load('doctrine');
+
+$doctrine_cfg->set('console_commands',
+    array_merge( $doctrine_cfg->get('console_commands',array()),
+        array(
+            // Migrations Commands
+            new \Doctrine\DBAL\Migrations\Tools\Console\Command\DiffCommand(),
+            new \Doctrine\DBAL\Migrations\Tools\Console\Command\ExecuteCommand(),
+            new \Doctrine\DBAL\Migrations\Tools\Console\Command\GenerateCommand(),
+            new \Doctrine\DBAL\Migrations\Tools\Console\Command\MigrateCommand(),
+            new \Doctrine\DBAL\Migrations\Tools\Console\Command\StatusCommand(),
+            new \Doctrine\DBAL\Migrations\Tools\Console\Command\VersionCommand()
+        )
+    )
+);
