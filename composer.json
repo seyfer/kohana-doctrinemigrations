@@ -1,0 +1,8 @@
+{
+    "name": "kohana/doctrinemigrations",
+    "require": {
+        "php": ">=5.4",
+        "doctrine/orm": "2.4.*",
+        "doctrine/migrations": "1.0.*@dev"
+    }
+}

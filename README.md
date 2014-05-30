@@ -4,6 +4,17 @@
 - **Module URL:** <http://github.com/synchrone/kohana-doctrinemigrations>
 - **Compatible Kohana Version(s):** 3.2
 
+## Usage
+
+Require kohana-doctrine installed.
+
+Copy doctrine.php and migrations.xml to application/config.
+
+```
+php vendor/kohana/modules/doctrine/bin/doctrine migrations:diff --configuration=/application/config/migrations.xml
+php vendor/kohana/modules/doctrine/bin/doctrine migrations:status --configuration=/application/config/migrations.xml
+```
+
 ## Description
 
 This module allows for managing database migrations between multiple environments easily by
