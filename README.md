@@ -11,8 +11,8 @@ Require kohana-doctrine installed.
 Copy doctrine.php and migrations.xml to application/config.
 
 ```
-php vendor/kohana/modules/doctrine/bin/doctrine migrations:diff --configuration=/application/config/migrations.xml
-php vendor/kohana/modules/doctrine/bin/doctrine migrations:status --configuration=/application/config/migrations.xml
+php vendor/kohana/modules/doctrine/bin/doctrine migrations:diff --configuration=application/config/migrations.xml
+php vendor/kohana/modules/doctrine/bin/doctrine migrations:status --configuration=application/config/migrations.xml
 ```
 
 ## Description
