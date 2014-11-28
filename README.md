@@ -1,12 +1,12 @@
 # Doctrine Migrations
 
-*Doctrine Migrations module for Kohana 3.x*
-- **Module URL:** <http://github.com/synchrone/kohana-doctrinemigrations>
+*Doctrine Migrations module for Kohana 3.2*
+- **Module URL:** <http://github.com/seyfer/kohana-doctrinemigrations>
 - **Compatible Kohana Version(s):** 3.2
 
 ## Usage
 
-Require kohana-doctrine installed.
+Require kohana-doctrine installed. <https://github.com/seyfer/kohana-doctrine>
 
 Copy doctrine.php and migrations.xml to application/config.
 
@@ -22,13 +22,11 @@ utilizing the Doctrine migrations library.
 
 ## Requirements & Installation
 
-The Doctrine Migrations module is tested with Doctrine v2.0.6. You should run
-`git submodule update --init` to load Doctrine into the vendor directory of this module.
-Additionally, you should create a doctrine config file and specify it's path in your
+The Doctrine Migrations module is tested with Doctrine v2.4. You should create a doctrine config file and specify vendor path in your
 `config/doctrine.php` file under `configuration` key
 
 To run from the command line, you will need kohana-doctrine module available at
-<http://github.com/synchrone/kohana-doctrine>
+<http://github.com/seyfer/kohana-doctrine>
 Remember to add this module after kohana-doctrine in the bootstrap.php
 After that you will be able to run `./modules/kohana-doctrine/bin/doctrine` or copy it to your application root
 

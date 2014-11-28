@@ -1,5 +1,8 @@
 {
     "name": "kohana/doctrinemigrations",
+    "version": "3.2",
+    "description": "Kohana module for 3.2 version to integrate with Doctrine ORM",
+    "author": "Oleg Abrazhaev <seyferseed@mail.ru>",
     "require": {
         "php": ">=5.4",
         "doctrine/orm": "2.4.*",

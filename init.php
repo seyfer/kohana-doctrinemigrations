@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @category  module
+ * @package   kohana-doctrinemigrations
+ * @author    synchrone, Oleg Abrazhaev <seyferseed@mail.ru>
+ * @link      http://github.com/seyfer/kohana-doctrinemigrations
+ */
 defined('SYSPATH') or die('No direct script access.');
 
 $modules = Kohana::modules();
