@@ -1,11 +1,31 @@
 {
-    "name": "kohana/doctrinemigrations",
+    "name": "seyfer/kohana-doctrine-migrations",
     "version": "3.2",
-    "description": "Kohana module for 3.2 version to integrate with Doctrine ORM",
-    "author": "Oleg Abrazhaev <seyferseed@mail.ru>",
+    "description": "Kohana module to integrate with Doctrine ORM migrations",
+    "type": "kohana-module",
+    "authors": [
+        {
+            "name": "seyfer",
+            "email": "seyferseed@mail.ru",
+            "homepage": "http://seyferseed.ru",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "doctrine/orm": "2.4.*",
         "doctrine/migrations": "1.0.*@dev"
+    },
+    "autoload": {
+        "classmap": [
+            "classes/"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/kohana/modules/{$name}/": [
+                "type:kohana-module"
+            ]
+        }
     }
 }

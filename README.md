@@ -1,7 +1,7 @@
 # Doctrine Migrations
 
 *Doctrine Migrations module for Kohana 3.2*
-- **Module URL:** <http://github.com/seyfer/kohana-doctrinemigrations>
+- **Module URL:** <http://github.com/seyfer/kohana-doctrine-migrations>
 - **Compatible Kohana Version(s):** 3.2
 
 ## Usage
