@@ -1,6 +1,6 @@
 {
     "name": "seyfer/kohana-doctrine-migrations",
-    "version": "3.2",
+    "version": "3.3",
     "description": "Kohana module to integrate with Doctrine ORM migrations",
     "type": "kohana-module",
     "authors": [
