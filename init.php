@@ -1,4 +1,4 @@
-<?php
+co<?php
 
 /**
  * @category  module
@@ -21,20 +21,24 @@ $classLoader->register();
 
 $doctrine_cfg = Kohana::$config->load('doctrine');
 
-$doctrine_cfg->set('console_commands', array_merge($doctrine_cfg->get('console_commands', array()), array(
-    // Migrations Commands
-    new \Doctrine\DBAL\Migrations\Tools\Console\Command\DiffCommand(),
-    new \Doctrine\DBAL\Migrations\Tools\Console\Command\ExecuteCommand(),
-    new \Doctrine\DBAL\Migrations\Tools\Console\Command\GenerateCommand(),
-    new \Doctrine\DBAL\Migrations\Tools\Console\Command\MigrateCommand(),
-    new \Doctrine\DBAL\Migrations\Tools\Console\Command\StatusCommand(),
-    new \Doctrine\DBAL\Migrations\Tools\Console\Command\VersionCommand()
-                )
-        )
-);
+$doctrine_cfg
+    ->set('console_commands', array_merge($doctrine_cfg
+                                              ->get('console_commands', []), [
+                                              // Migrations Commands
+                                              new \Doctrine\DBAL\Migrations\Tools\Console\Command\DiffCommand(),
+                                              new \Doctrine\DBAL\Migrations\Tools\Console\Command\ExecuteCommand(),
+                                              new \Doctrine\DBAL\Migrations\Tools\Console\Command\GenerateCommand(),
+                                              new \Doctrine\DBAL\Migrations\Tools\Console\Command\MigrateCommand(),
+                                              new \Doctrine\DBAL\Migrations\Tools\Console\Command\StatusCommand(),
+                                              new \Doctrine\DBAL\Migrations\Tools\Console\Command\VersionCommand()
+                                          ]
+                            )
+    );
 
-$doctrine_cfg->set('console_helpers', array_merge($doctrine_cfg->get('console_helpers', array()), array(
-    'dialog' => new \Symfony\Component\Console\Helper\DialogHelper(),
-                )
-        )
-);
+$doctrine_cfg
+    ->set('console_helpers', array_merge($doctrine_cfg
+                                             ->get('console_helpers', []), [
+                                             'dialog' => new \Symfony\Component\Console\Helper\QuestionHelper(),
+                                         ]
+                           )
+    );

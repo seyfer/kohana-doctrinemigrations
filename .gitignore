@@ -3,3 +3,5 @@ Icon?
 .svn
 nbproject
 Thumbs.db
+vendor/
+.idea/
