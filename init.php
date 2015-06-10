@@ -34,7 +34,7 @@ $doctrine_cfg->set('console_commands', array_merge($doctrine_cfg->get('console_c
 );
 
 $doctrine_cfg->set('console_helpers', array_merge($doctrine_cfg->get('console_helpers', array()), array(
-    'dialog' => new \Symfony\Component\Console\Helper\DialogHelper(),
+    'dialog' => new \Symfony\Component\Console\Helper\QuestionHelper(),
                 )
         )
 );
