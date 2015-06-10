@@ -6,7 +6,7 @@
  * @author    synchrone, Oleg Abrazhaev <seyferseed@mail.ru>
  * @link      http://github.com/seyfer/kohana-doctrinemigrations
  */
-return array(
+return [
     // location of the "Doctrine" directory
     'vendor_path'         => APPPATH . '../vendor/',
     'doctrine_path'       => APPPATH . '../vendor/doctrine/',
@@ -25,17 +25,17 @@ return array(
     // mappings between Kohaha database types and Doctrine database drivers
     // @see http://kohanaframework.org/3.1/guide/database/config#connection-settings
     // @see http://www.doctrine-project.org/docs/dbal/2.0/en/reference/configuration.html#connection-details
-    'type_driver_mapping' => array(
+    'type_driver_mapping' => [
         'pdo'   => 'pdo',
         'mysql' => 'pdo_mysql',
         'PDO'   => 'pdo',
         'MySQL' => 'pdo_mysql'
-    //'N/A' => 'pdo_pgsql',
-    //'N/A' => 'pdo_sqlite',
-    //'N/A' => 'pdo_oci',
-    //'N/A' => 'oci8',
-    ),
-    'console_commands'    => array(),
-    'console_helpers'     => array(),
+        //'N/A' => 'pdo_pgsql',
+        //'N/A' => 'pdo_sqlite',
+        //'N/A' => 'pdo_oci',
+        //'N/A' => 'oci8',
+    ],
+    'console_commands'    => [],
+    'console_helpers'     => [],
     'configuration'       => APPPATH . 'config/doctrine.xml',
-);
+];

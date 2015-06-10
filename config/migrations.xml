@@ -8,7 +8,7 @@
 
     <migrations-namespace>Application</migrations-namespace>
 
-    <table name="doctrine_migration_versions" />
+    <table name="doctrine_migration_versions"/>
 
     <migrations-directory>application/classes/Doctrine/Migrations/</migrations-directory>
 
